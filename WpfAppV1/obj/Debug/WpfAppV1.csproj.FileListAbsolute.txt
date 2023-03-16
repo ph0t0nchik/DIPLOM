@@ -1,0 +1,16 @@
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\MainWindow.g.cs
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\App.g.cs
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1_MarkupCompile.cache
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1_MarkupCompile.lref
+D:\Program\DIPLOM\WpfAppV1\bin\Debug\WpfAppV1.exe.config
+D:\Program\DIPLOM\WpfAppV1\bin\Debug\WpfAppV1.exe
+D:\Program\DIPLOM\WpfAppV1\bin\Debug\WpfAppV1.pdb
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\MainWindow.baml
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1.g.resources
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1.Properties.Resources.resources
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1.csproj.GenerateResource.cache
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1.exe
+D:\Program\DIPLOM\WpfAppV1\obj\Debug\WpfAppV1.pdb

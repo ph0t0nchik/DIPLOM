@@ -1,0 +1,99 @@
+MainWindow.xaml
+<Window x:Class="WmiPresenter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tree="clr-namespace:WmiPresenter.ForeignComponents.TreeListView.Tree"
+        xmlns:l="clr-namespace:WmiPresenter.Ui"
+        Title="WMI Presenter" Height="434" Width="755" Icon="/WmiPresenter;component/Images/Workgroup.png" Background="#FFF0F4FA">
+	<Window.Resources>
+		<ResourceDictionary Source="\ForeignComponents\TreeListView\Themes\Generic.xaml"></ResourceDictionary>
+	</Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" MinWidth="100"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+			<Button Name="ButtonStatistics" Height="60" Margin="20, 5, 20, 5" HorizontalAlignment="Stretch" Content="Отчёт" Foreground="Black" BorderBrush="#23000000" Width="57" FontStretch="Normal" FlowDirection="LeftToRight" ClickMode="Hover" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsHitTestVisible="False" OpacityMask="{x:Null}" Focusable="False" IsManipulationEnabled="False">
+				<Button.Background>
+					<ImageBrush ImageSource="/WmiPresenter;component/Images/text-x-generic.png" />
+				</Button.Background>
+			</Button>
+		</StackPanel>
+		<ListView Grid.Row="1" Grid.Column="0" Name="ListViewComputers" Margin="5, 5, 5, 5" ItemsSource="{Binding Computers}" SelectionChanged="ListViewComputersOnSelectionChanged"></ListView>
+		<TabControl Grid.Row="1" Grid.Column="1" Name="TabsParameters" Margin="5, 5, 5, 5">
+			<TabItem Header="Активность">
+				<ListView Margin="5, 5, 5, 5" ItemsSource="{Binding Statistics}">
+					<ListView.Resources>
+						<DataTemplate x:Key="TextDataTemplate">
+							<Label Content="{Binding Value}"></Label>
+						</DataTemplate>
+						<DataTemplate x:Key="ProgressDataTemplate">
+							<ProgressBar Minimum="0" Maximum="100" Value="{Binding Value}" Width="Auto" MinWidth="200" Height="Auto" MinHeight="15"></ProgressBar>
+						</DataTemplate>
+						<l:ProcessParametersSelector x:Key="TemplateSelector" TextTemplate="{StaticResource TextDataTemplate}" ProgressTemplate="{StaticResource ProgressDataTemplate}" />
+					</ListView.Resources>
+					<ListView.Template>
+						<ControlTemplate TargetType="{x:Type ListView}">
+							<Border BorderThickness="{TemplateBinding Border.BorderThickness}"
+									Padding="1,1,1,1"
+									BorderBrush="{TemplateBinding Border.BorderBrush}"
+									Background="{TemplateBinding Panel.Background}"
+									Name="Bd"
+									SnapsToDevicePixels="True">
+								<ScrollViewer Padding="{TemplateBinding Control.Padding}" Focusable="False">
+									<ItemsPresenter SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+								</ScrollViewer>
+							</Border>
+						</ControlTemplate>
+					</ListView.Template>
+					<ListView.View>
+						<GridView>
+							<GridViewColumn Width="Auto">
+								<GridViewColumn.CellTemplate>
+									<DataTemplate>
+										<Label Content="{Binding Key}"></Label>
+									</DataTemplate>
+								</GridViewColumn.CellTemplate>
+							</GridViewColumn>
+							<GridViewColumn Width="Auto">
+								<GridViewColumn.CellTemplate>
+									<DataTemplate>
+										<ContentControl Content="{Binding Value}" ContentTemplateSelector="{DynamicResource TemplateSelector}"></ContentControl>
+									</DataTemplate>
+								</GridViewColumn.CellTemplate>
+							</GridViewColumn>
+						</GridView>
+					</ListView.View>
+				</ListView>
+			</TabItem>
+			<TabItem Header="Приложения">
+				<tree:TreeList Grid.Row="0" x:Name="Tree">
+					<tree:TreeList.View>
+						<GridView>
+							<GridView.Columns>
+								<GridViewColumn Width="150" Header="ID Процесса">
+									<GridViewColumn.CellTemplate>
+										<DataTemplate>
+											<StackPanel Orientation="Horizontal">
+												<tree:RowExpander/>
+												<TextBlock Text="{Binding Id}"></TextBlock>
+											</StackPanel>
+										</DataTemplate>
+									</GridViewColumn.CellTemplate>
+								</GridViewColumn>
+								
+								<GridViewColumn Header="Имя процесса" Width="300" DisplayMemberBinding="{Binding Name}"/>
+							</GridView.Columns>
+						</GridView>
+					</tree:TreeList.View>
+				</tree:TreeList>
+			</TabItem>
+			<TabItem Header="Интернет"></TabItem>
+		</TabControl>
+    </Grid>
+</Window>
