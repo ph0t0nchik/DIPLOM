@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:WpfAppV1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStyle="ThreeDBorderWindow">
-    <Grid>
+    <Window.Resources>
         
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button Name="ButtonStatistics" Height="60" Margin="20, 5, 20, 5" HorizontalAlignment="Stretch" Content="Отчёт" Foreground="Black" BorderBrush="#23000000" Width="57" FontStretch="Normal" FlowDirection="LeftToRight" ClickMode="Hover" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsHitTestVisible="False" OpacityMask="{x:Null}" Focusable="False" IsManipulationEnabled="False">
+                <Button.Background>
+                    <ImageBrush />
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        
+        <TabControl Grid.Row="1" Grid.Column="1" Name="TabsParameters" Margin="5, 5, 5, 5">
+            <TabItem Header="Приложения"></TabItem>
+            <TabItem Header="Интернет"></TabItem>
+        </TabControl>
+
     </Grid>
 </Window>

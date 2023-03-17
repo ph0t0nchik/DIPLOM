@@ -8,5 +8,5 @@ git status
 
 git commit -m "add filename.ext" - подготовили изменения для глобального репозитори
 
-git push -u original main - отправили файл в глобальный репозиторий
+git push -u origin main - отправили файл в глобальный репозиторий
 
