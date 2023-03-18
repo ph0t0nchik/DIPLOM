@@ -1,0 +1,15 @@
+D:\Program\DIPLOM\test\WpfTestApp\bin\Debug\WpfTestApp.exe.config
+D:\Program\DIPLOM\test\WpfTestApp\bin\Debug\WpfTestApp.exe
+D:\Program\DIPLOM\test\WpfTestApp\bin\Debug\WpfTestApp.pdb
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\MainWindow.g.cs
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\App.g.cs
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\WpfTestApp_MarkupCompile.cache
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\WpfTestApp_MarkupCompile.lref
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\MainWindow.baml
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\WpfTestApp.g.resources
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\WpfTestApp.Properties.Resources.resources
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\WpfTestApp.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\WpfTestApp.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\WpfTestApp.exe
+D:\Program\DIPLOM\test\WpfTestApp\obj\Debug\WpfTestApp.pdb
