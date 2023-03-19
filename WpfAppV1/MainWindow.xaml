@@ -27,6 +27,52 @@
         </StackPanel>
         
         <TabControl Grid.Row="1" Grid.Column="1" Name="TabsParameters" Margin="5, 5, 5, 5">
+            <TabItem Header="Активность">
+                <ListView Margin="5, 5, 5, 5" ItemsSource="{Binding Statistics}">
+                    <ListView.Resources>
+                        <DataTemplate x:Key="TextDataTemplate">
+                            <Label Content="{Binding Value}"></Label>
+                        </DataTemplate>
+                        <DataTemplate x:Key="ProgressDataTemplate">
+                            <ProgressBar Minimum="0" Maximum="100" Value="{Binding Value}" Width="Auto" MinWidth="200" Height="Auto" MinHeight="15"></ProgressBar>
+                        </DataTemplate>
+                        <l:ProcessParametersSelector x:Key="TemplateSelector" TextTemplate="{StaticResource TextDataTemplate}" ProgressTemplate="{StaticResource ProgressDataTemplate}" />
+                    </ListView.Resources>
+                    <ListView.Template>
+                        <ControlTemplate TargetType="{x:Type ListView}">
+                            <Border BorderThickness="{TemplateBinding Border.BorderThickness}"
+									Padding="1,1,1,1"
+									BorderBrush="{TemplateBinding Border.BorderBrush}"
+									Background="{TemplateBinding Panel.Background}"
+									Name="Bd"
+									SnapsToDevicePixels="True">
+                                <ScrollViewer Padding="{TemplateBinding Control.Padding}" Focusable="False">
+                                    <ItemsPresenter SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                                </ScrollViewer>
+                            </Border>
+                        </ControlTemplate>
+                    </ListView.Template>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="Auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label Content="{Binding Key}"></Label>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="Auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ContentControl Content="{Binding Value}" ContentTemplateSelector="{DynamicResource TemplateSelector}"></ContentControl>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
+           
             <TabItem Header="Приложения"></TabItem>
             <TabItem Header="Интернет"></TabItem>
         </TabControl>

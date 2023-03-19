@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfAppV1.WMI.Common;
+using WmiPresenter.WMI.Common;
 
 
-namespace WpfAppV1.Prototypes
+namespace WmiPresenter.Prototypes
 {
 	[WmiMap("Win32_LogicalDisk")]
 	public class LogicalDisk

@@ -1,12 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
+using HookContracts;
 
-namespace WpfAppV1
+namespace HookClientExample
 {
-    class CallBack
-    {
-    }
+	internal class Callback : IHookCallback
+	{
+		public void OnKeyDown(Keys keys)
+		{
+			Console.WriteLine("KeyDown: [{0}]", keys);
+		}
+
+		public void OnKeyUp(Keys keys)
+		{
+			Console.WriteLine("KeyUp: [{0}]", keys);
+		}
+	}
 }
+

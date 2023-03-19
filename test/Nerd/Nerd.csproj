@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D131026B-5B7B-4BFF-A3EB-3B3738E5AB68}</ProjectGuid>
+    <ProjectGuid>{2EC59A65-39A3-43D3-80E3-B1C213C8D6CB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfAppV1</RootNamespace>
-    <AssemblyName>WpfAppV1</AssemblyName>
+    <RootNamespace>Nerd</RootNamespace>
+    <AssemblyName>Nerd</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -38,7 +38,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Management.Instrumentation" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,7 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UserAccount.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,29 +64,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CallBack.cs" />
-    <Compile Include="Computer.cs" />
-    <Compile Include="DataModel.cs" />
-    <Compile Include="HookControl.cs" />
-    <Compile Include="InstanseExport.cs" />
-    <Compile Include="LogicalDisk.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Native.cs" />
-    <Compile Include="Network.cs" />
-    <Compile Include="NetworkConnection.cs" />
-    <Compile Include="NtDomain.cs" />
-    <Compile Include="NtLogEvent.cs" />
-    <Compile Include="PhysicalMemory.cs" />
-    <Compile Include="Process.cs" />
-    <Compile Include="Processes.cs" />
-    <Compile Include="Processor.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Programcs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

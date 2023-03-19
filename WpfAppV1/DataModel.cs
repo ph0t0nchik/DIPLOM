@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
 using System.Windows.Threading;
-using WpfAppV1;
-using WpfAppV1.Prototypes;
-using WpfAppV1.Containers;
-using WpfAppV1.Data;
+using WmiController;
+using WmiController.Prototypes;
+using WmiPresenter.Containers;
+using WmiPresenter.Data;
 
-namespace WpfAppV1
+namespace WmiPresenter
 {
 	internal class DataModel
 	{
@@ -49,7 +49,7 @@ namespace WpfAppV1
 				return;
 			if (m_dispatcher == null)
 				return;
-			var list = new List<StatisticsItem>();
+			var list = new List StatisticsItem();
 			var system = m_computer.SystemInfo;
 			list.Add(StatisticsItem.Create("Имя компьютера", system.Name));
 			list.Add(StatisticsItem.Create("Пользователь", system.UserName));

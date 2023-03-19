@@ -1,0 +1,22 @@
+﻿<Window x:Class="Nerd.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nerd"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="554" Width="800">
+    <Grid Margin="0,0,-0.4,-97">
+        <TextBlock x:Name="LblClock" HorizontalAlignment="Left" Margin="233,25,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="LblBatteryStatus" HorizontalAlignment="Left" Margin="19,65,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="LblSystemSku" HorizontalAlignment="Left" Margin="19,117,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="LblProcName" HorizontalAlignment="Left" Margin="19,162,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="LblProcStatus" HorizontalAlignment="Left" Margin="19,216,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="LblProcClockSpeed" HorizontalAlignment="Left" Margin="19,262,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="LblProcPowerMan" HorizontalAlignment="Left" Margin="19,314,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,358,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,410,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,455,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+
+    </Grid>
+</Window>
