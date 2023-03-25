@@ -1,0 +1,154 @@
+{
+  "files": [
+    {
+      "fileName": "./ref/net7.0/Microsoft.Management.Infrastructure.CimCmdlets.xml",
+      "SPDXID": "SPDXRef-File--ref-net7.0-Microsoft.Management.Infrastructure.CimCmdlets.xml-D0E2B981F424D7A2510D58E2297A082EA7FC6354",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ebf93eef4142bf0a3f9c4fd57840837985ddca074af4e4ce5e16cd27f05853ee"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "d0e2b981f424d7a2510d58e2297a082ea7fc6354"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ref/net7.0/System.Management.Automation.dll",
+      "SPDXID": "SPDXRef-File--ref-net7.0-System.Management.Automation.dll-AA4418FD0FC82286756B5C1C2E6CE2B581341EB2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "38bfd890044b1f550039084ed3c29fa2e6889cc5fb33b31ba9fed007cb46cccc"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "aa4418fd0fc82286756b5c1c2e6ce2b581341eb2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./runtimes/win/lib/net7.0/Microsoft.Management.Infrastructure.CimCmdlets.dll",
+      "SPDXID": "SPDXRef-File--runtimes-win-lib-net7.0-Microsoft.Management.Infrastructure.CimCmdlets.dll-5A7864B2DB3056B6F1382ED94F2A0A670582D809",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b657036c8e3b804347f0635ea9859481abed600f9a45436c9f14b666f506504b"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "5a7864b2db3056b6f1382ed94f2a0a670582d809"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ref/net7.0/System.Management.Automation.xml",
+      "SPDXID": "SPDXRef-File--ref-net7.0-System.Management.Automation.xml-DC0C6907241B018D5EB661A5BC66ED61206608D6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fa16a27975d19b8311f0c1b28b1b6395b420179ac9db39e5a0075846e2c919cc"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "dc0c6907241b018d5eb661a5bc66ed61206608d6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "packages": [
+    {
+      "name": "System.Management.Automation",
+      "SPDXID": "SPDXRef-Package-C40BEFC1A09CEDCDF56E02C96869712BDC4D90876B7E4C869141C929DB3EE606",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "7.3.3",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/System.Management.Automation@7.3.3"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Management.Infrastructure.CimCmdlets",
+      "SPDXID": "SPDXRef-RootPackage",
+      "downloadLocation": "NOASSERTION",
+      "packageVerificationCode": {
+        "packageVerificationCodeValue": "ccd2f647d22658b2ab1b44c475ff421c1f1d62b5"
+      },
+      "filesAnalyzed": true,
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "7.3.3",
+      "supplier": "Organization: Microsoft",
+      "hasFiles": [
+        "SPDXRef-File--ref-net7.0-System.Management.Automation.xml-DC0C6907241B018D5EB661A5BC66ED61206608D6",
+        "SPDXRef-File--runtimes-win-lib-net7.0-Microsoft.Management.Infrastructure.CimCmdlets.dll-5A7864B2DB3056B6F1382ED94F2A0A670582D809",
+        "SPDXRef-File--ref-net7.0-System.Management.Automation.dll-AA4418FD0FC82286756B5C1C2E6CE2B581341EB2",
+        "SPDXRef-File--ref-net7.0-Microsoft.Management.Infrastructure.CimCmdlets.xml-D0E2B981F424D7A2510D58E2297A082EA7FC6354"
+      ]
+    }
+  ],
+  "externalDocumentRefs": [],
+  "relationships": [
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-RootPackage",
+      "spdxElementId": "SPDXRef-DOCUMENT"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-C40BEFC1A09CEDCDF56E02C96869712BDC4D90876B7E4C869141C929DB3EE606",
+      "spdxElementId": "SPDXRef-RootPackage"
+    }
+  ],
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "Microsoft.Management.Infrastructure.CimCmdlets 7.3.3",
+  "documentNamespace": "https://sbom.microsoft/1:2QSF7qZlbE-F7QrUJlEo7g:pHp_nUFvDUijZ4LrJ4RhoQ/696:339351/Microsoft.Management.Infrastructure.CimCmdlets:7.3.3:Dg-4gJnQVEeUoTtV6HsG-g",
+  "creationInfo": {
+    "created": "2023-02-18T23:25:31Z",
+    "creators": [
+      "Organization: Microsoft",
+      "Tool: Microsoft.SBOMTool-0.3.2"
+    ]
+  },
+  "documentDescribes": [
+    "SPDXRef-RootPackage"
+  ]
+}

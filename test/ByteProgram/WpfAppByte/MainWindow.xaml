@@ -1,0 +1,72 @@
+﻿<Window x:Class="WpfAppByte.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppByte"
+        mc:Ignorable="d"
+        Title="WMI App" Height="558" Width="1003" 
+        d:DataContext="{d:DesignInstance Type=local:ViewModel}">
+    <Grid Margin="0,0,-0.4,0">
+        <Menu HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0">
+            <MenuItem Header="Файл" Height="28" Width="48">
+                <MenuItem Header="Выход" HorizontalAlignment="Left" Height="28" Width="139"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Height="36" Width="139"/>
+            </MenuItem>
+        </Menu>
+        <TabControl HorizontalAlignment="Left" Height="501" Margin="144,28,0,-0.2" VerticalAlignment="Top" Width="853" x:Name="tabControl">
+            <TabItem Header="Процессы">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBox Grid.Row="0" Grid.Column="0"></TextBox>
+
+                    <ListView x:Name="listP" ItemsSource="{Binding Items}" Grid.Row="1" Grid.ColumnSpan="2" SelectionChanged="listP_SelectionChanged" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label  Content="S="></Label>
+                                    <Label Content="{Binding Tab1.A}" Grid.Column="0" Foreground="Red" Margin="0,0,100,0"></Label>
+                                    <Label  Content="A="></Label>
+                                    <Label Content="{Binding A}" Grid.Column="1" Foreground="Black"></Label>
+                                </StackPanel>
+       
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <!--
+                        <ListView.ContextMenu>
+                            <ContextMenu>
+                                <Button Content="Завершить"/>
+                                <Button Content="Завершить дерево"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                        <ListView.View>
+                            <GridView AllowsColumnReorder="False">
+                                <GridViewColumn Header="Название" Width="200"/>
+                                <GridViewColumn Header="Занимаемая память" Width="200"/>
+                            </GridView>
+                        </ListView.View>
+                        -->
+                    </ListView>
+                    
+                    <Button Content="Обновить" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30"  Click="Button_Click"/>
+                    <Button Content="Завершить" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="75,0,0,0" Click="Button_Click_1"/>
+                    <Button Content="Завершить дерево процессов" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="177" Height="30" Margin="150,0,0,0"/>
+                    <Label Content="{Binding Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="50" Margin="42,2,0,0"/>
+                    <TextBox HorizontalAlignment="Left" Height="21" Margin="97,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Text="{Binding Text}"/>
+                
+                </Grid>
+            </TabItem>
+            <TabItem Header="Активность">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

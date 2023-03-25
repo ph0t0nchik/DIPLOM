@@ -1,0 +1,15 @@
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\bin\Debug\WpfAppByte.exe.config
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\bin\Debug\WpfAppByte.exe
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\bin\Debug\WpfAppByte.pdb
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\MainWindow.g.cs
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\App.g.cs
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte_MarkupCompile.cache
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte_MarkupCompile.lref
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\MainWindow.baml
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte.g.resources
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte.Properties.Resources.resources
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte.exe
+D:\Program\DIPLOM\test\ByteProgram\WpfAppByte\obj\Debug\WpfAppByte.pdb

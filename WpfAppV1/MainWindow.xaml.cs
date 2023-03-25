@@ -18,11 +18,26 @@ namespace WpfAppV1
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
+    /// 
+
+    public class ViewModel
+    {
+        public int Width { get; set; }
+        public string Text { get; set; }
+    }
     public partial class MainWindow : Window
     {
+        public int A { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new ViewModel();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("SSSSSS");
         }
     }
 }

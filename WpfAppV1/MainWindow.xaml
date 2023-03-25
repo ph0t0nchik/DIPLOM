@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppV1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStyle="ThreeDBorderWindow">
+        Title="MainWindow" Height="450" Width="800" WindowStyle="ThreeDBorderWindow" DataContext="ViewModel">
     <Window.Resources>
         
     </Window.Resources>
@@ -34,9 +34,9 @@
                             <Label Content="{Binding Value}"></Label>
                         </DataTemplate>
                         <DataTemplate x:Key="ProgressDataTemplate">
-                            <ProgressBar Minimum="0" Maximum="100" Value="{Binding Value}" Width="Auto" MinWidth="200" Height="Auto" MinHeight="15"></ProgressBar>
+                            <ProgressBar Minimum="0" Maximum="100" Value="{Binding Value}" Width="Auto" MinWidth="200" Height="Auto" MinHeight="15" ></ProgressBar>
                         </DataTemplate>
-                        <l:ProcessParametersSelector x:Key="TemplateSelector" TextTemplate="{StaticResource TextDataTemplate}" ProgressTemplate="{StaticResource ProgressDataTemplate}" />
+                        
                     </ListView.Resources>
                     <ListView.Template>
                         <ControlTemplate TargetType="{x:Type ListView}">
