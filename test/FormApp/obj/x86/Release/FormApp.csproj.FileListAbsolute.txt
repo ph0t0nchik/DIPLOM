@@ -1,0 +1,10 @@
+D:\Program\DIPLOM\test\FormApp\obj\x86\Release\FormApp.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\test\FormApp\obj\x86\Release\FormApp.Form1.resources
+D:\Program\DIPLOM\test\FormApp\obj\x86\Release\FormApp.Properties.Resources.resources
+D:\Program\DIPLOM\test\FormApp\obj\x86\Release\FormApp.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\FormApp\obj\x86\Release\FormApp.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\FormApp\bin\x86\Release\FormApp.exe.config
+D:\Program\DIPLOM\test\FormApp\bin\x86\Release\FormApp.exe
+D:\Program\DIPLOM\test\FormApp\bin\x86\Release\FormApp.pdb
+D:\Program\DIPLOM\test\FormApp\obj\x86\Release\FormApp.exe
+D:\Program\DIPLOM\test\FormApp\obj\x86\Release\FormApp.pdb

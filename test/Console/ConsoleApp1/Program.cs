@@ -19,18 +19,60 @@ namespace ConsoleApp1
             ConnectionOptions options = new ConnectionOptions();
             options.Username = "test";
             options.Password = "1234";
-            ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2", options);
+            ObjectGetOptions opt = new ObjectGetOptions();
+
+
+            //ManagementScope scope = new ManagementScope("\\\\localhost\\root\\CIMV2");
+            ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2",options);
             scope.Connect();
-            ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Processor");
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
-            foreach (ManagementObject manObj in searcher.Get())
+
+            /*ManagementClass objClass = null;
+            int PID = 0;
+            try
             {
-                Console.WriteLine(manObj["Name"].ToString());
-                Console.WriteLine(Convert.ToInt32(manObj["VoltageCaps"]));
+                objClass = new ManagementClass(scope, new ManagementPath("\\\\localhost\\root\\CIMV2:Win32_Process"),opt);
+                ManagementBaseObject inParams = objClass.GetMethodParameters("Create");
+                inParams["CommandLine"] = "calc.exe";
+                ManagementBaseObject outParams = objClass.InvokeMethod("Create", inParams, null);
+                PID = Convert.ToInt32(outParams["processId"]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0}: {1}", e.HResult, e.Message);
+            }
+            finally
+            {
+                if (objClass != null)
+                {
+                    objClass.Dispose();
+                }
+            }
+            Console.WriteLine("PID: {0}", PID);*/
+
+            try
+            {
+                
+                ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Process WHERE Name='chrome.exe'");
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    obj.InvokeMethod("Terminate", null);
+                }
+            }
+            catch (ManagementException e)
+            {
+                Console.WriteLine("{0}: {1}", e.HResult, e.Message);
             }
 
-
             Console.ReadLine();
+        }
+
+        public class WimInfo
+        {
+            public string Name;
+            //....
+
+
         }
     }
 }
