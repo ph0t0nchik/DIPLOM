@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,14 +9,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Management;
+using System.Threading;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+
 
 namespace FormsAppHardware
 {
     public partial class Form1 : Form
     {
+        private ListViewItemComparer comparer = null;
+        private System.Windows.Forms.Timer timer;
+        string name, IP;
+        private Thread findPC;
+
         public Form1()
         {
             InitializeComponent();
+            GetProcess(listView2);
+            timer = new System.Windows.Forms.Timer();
+            timer.Interval = 5000;
+            timer.Tick += new EventHandler(Timer_Tick);
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            
         }
 
         private void GetHardWareInfo(string key, ListView list)
@@ -107,6 +128,42 @@ namespace FormsAppHardware
             }
         }
 
+        private void GetProcess(ListView proc_list)
+        {
+            
+            ConnectionOptions options = new ConnectionOptions();
+            options.Username = "test";
+            options.Password = "1234";
+            ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2", options);
+            //ManagementScope scope = new ManagementScope("\\\\localhost\\root\\CIMV2");
+            scope.Connect();
+            ObjectQuery query = new ObjectQuery("SELECT Name,ProcessId FROM Win32_Process");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
+            proc_list.Items.Clear();
+            try
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    ListViewItem item = new ListViewItem(new string[] { obj["Name"].ToString(), Convert.ToInt32(obj["ProcessId"]).ToString() });
+
+                    if (proc_list.Items.Count % 2 != 0)
+                    {
+                        item.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        item.BackColor = Color.WhiteSmoke;
+                    }
+
+                    proc_list.Items.Add(item);
+
+                   
+                    
+                }
+            }
+            catch (Exception) { }
+        }
+
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string key = string.Empty;
@@ -152,7 +209,10 @@ namespace FormsAppHardware
                     key = "* FROM Win32_Account";
                     break;
                 case "Процессы":
-                    key = "Caption FROM Win32_Process";
+                    key = "* FROM Win32_Process";
+                    break;
+                case "Локальная сеть":
+                    key = "* FROM Win32_Group";
                     break;
 
             }
@@ -162,6 +222,141 @@ namespace FormsAppHardware
         private void Form1_Load(object sender, EventArgs e)
         {
             toolStripComboBox1.SelectedIndex = 0;
+            comparer = new ListViewItemComparer();
+            comparer.ColumnIndex = 0;
+        }
+                
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listView2.SelectedItems[0] != null)
+                {
+
+                    try
+                    {
+                        ConnectionOptions options = new ConnectionOptions();
+                        options.Username = "test";
+                        options.Password = "1234";
+                        ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2", options);
+                        //ManagementScope scope = new ManagementScope("\\\\localhost\\root\\CIMV2");
+                        scope.Connect();
+                        ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Process WHERE Name='" + listView2.SelectedItems[0].SubItems[0].Text + "'");
+                        ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
+                        foreach (ManagementObject obj in searcher.Get())
+                        {
+                            obj.InvokeMethod("Terminate", null);
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
+            }
+            catch (Exception) { }
+            GetProcess(listView2);
+        }
+
+        private void listView2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (listView2.SelectedItems[0] != null)
+            {
+                toolStripLabel2.Text = listView2.SelectedItems[0].SubItems[0].Text;
+            }
+        }
+
+        private void listView2_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            comparer.ColumnIndex = e.Column;
+
+            comparer.SortDirection = comparer.SortDirection == SortOrder.Ascending ? SortOrder.Descending : SortOrder.Ascending;
+
+            listView2.ListViewItemSorter = comparer;
+
+            listView2.Sort();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            GetProcess(listView2);
+            toolStripLabel2.Text = "";
+        }
+
+        void searchPC()
+        {
+            bool isNetworkUp = NetworkInterface.GetIsNetworkAvailable();
+            if (isNetworkUp)
+            {
+                var host = Dns.GetHostEntry(Dns.GetHostName());
+                foreach (var ip in host.AddressList)
+                {
+                    if (ip.AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        this.IP = ip.ToString();
+                    }
+                }
+                Invoke((MethodInvoker)delegate
+                {
+                    label1.Text = "This Computer: " + this.IP;
+                });
+                string[] ipRange = IP.Split('.');
+                for (int i = 0; i < 255; i++)
+                {
+                    Ping ping = new Ping();
+                    string testIP = ipRange[0] + '.' + ipRange[1] + '.' + ipRange[2] + '.' + i.ToString();
+                    if (testIP != this.IP)
+                    {
+                        ping.PingCompleted += new PingCompletedEventHandler(pingCompletedEvent);
+                        ping.SendAsync(testIP, 100, testIP);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Not connected to LAN");
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            listView3.Items.Clear();
+            try
+            {
+                findPC = new Thread(new ThreadStart(searchPC));
+                findPC.Start();
+                while (!findPC.IsAlive) ;
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show(e1.Message);
+            }
+        }
+
+        //for searching online computers
+        void pingCompletedEvent(object sender, PingCompletedEventArgs e)
+        {
+            string ip = (string)e.UserState;
+            if (e.Reply.Status == IPStatus.Success)
+            {
+                string name;
+                try
+                {
+                    IPHostEntry hostEntry = Dns.GetHostEntry(ip);
+                    name = hostEntry.HostName;
+                }
+                catch (SocketException ex)
+                {
+                    name = ex.Message;
+                }
+                Invoke((MethodInvoker)delegate
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.Text = name;
+                    item.SubItems.Add(ip);
+                    listView3.Items.Add(item);
+                });
+            }
         }
     }
 }

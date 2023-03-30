@@ -1,0 +1,10 @@
+D:\Program\DIPLOM\test\FormsAppHardware\bin\x64\Debug\FormsAppHardware.exe.config
+D:\Program\DIPLOM\test\FormsAppHardware\bin\x64\Debug\FormsAppHardware.exe
+D:\Program\DIPLOM\test\FormsAppHardware\bin\x64\Debug\FormsAppHardware.pdb
+D:\Program\DIPLOM\test\FormsAppHardware\obj\x64\Debug\FormsAppHardware.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\test\FormsAppHardware\obj\x64\Debug\FormsAppHardware.Form1.resources
+D:\Program\DIPLOM\test\FormsAppHardware\obj\x64\Debug\FormsAppHardware.Properties.Resources.resources
+D:\Program\DIPLOM\test\FormsAppHardware\obj\x64\Debug\FormsAppHardware.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\FormsAppHardware\obj\x64\Debug\FormsAppHardware.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\FormsAppHardware\obj\x64\Debug\FormsAppHardware.exe
+D:\Program\DIPLOM\test\FormsAppHardware\obj\x64\Debug\FormsAppHardware.pdb

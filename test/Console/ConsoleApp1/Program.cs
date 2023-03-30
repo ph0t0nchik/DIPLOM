@@ -23,8 +23,10 @@ namespace ConsoleApp1
 
 
             //ManagementScope scope = new ManagementScope("\\\\localhost\\root\\CIMV2");
-            ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2",options);
+            ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2", options);
             scope.Connect();
+
+            // ВЫВОД КАКОЙ-ЛИБО ХАРАКТЕРИСТИКИ ОБ (УДАЛЕННОМ) УСТРОЙСТВЕ
 
             /*ManagementClass objClass = null;
             int PID = 0;
@@ -49,6 +51,8 @@ namespace ConsoleApp1
             }
             Console.WriteLine("PID: {0}", PID);*/
 
+            // ЗАКРЫТИЕ ПРОЦЕССА НА (УДАЛЕННОМ) УСТРОЙСТВЕ
+            /*
             try
             {
                 
@@ -63,9 +67,15 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("{0}: {1}", e.HResult, e.Message);
             }
+            */
 
+            // ПОЛУЧЕНИЯ СПИСКА ВСЕХ УСТРОЙСТВ В ЛОКАЛЬНОЙ СЕТИ
+            
+            
             Console.ReadLine();
         }
+
+       
 
         public class WimInfo
         {

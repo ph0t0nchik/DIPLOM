@@ -1,0 +1,10 @@
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\bin\Debug\FormsAppNetwork.exe.config
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\bin\Debug\FormsAppNetwork.exe
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\bin\Debug\FormsAppNetwork.pdb
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\obj\Debug\FormsAppNetwork.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\obj\Debug\FormsAppNetwork.Form1.resources
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\obj\Debug\FormsAppNetwork.Properties.Resources.resources
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\obj\Debug\FormsAppNetwork.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\obj\Debug\FormsAppNetwork.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\obj\Debug\FormsAppNetwork.exe
+D:\Program\DIPLOM\test\Network\FormsAppNetwork\obj\Debug\FormsAppNetwork.pdb
