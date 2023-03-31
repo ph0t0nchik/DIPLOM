@@ -23,31 +23,27 @@ namespace FormsAppHardware
         private System.Windows.Forms.Timer timer;
         string name, IP;
         private Thread findPC;
+        ManagementScope scope;
 
         public Form1()
         {
             InitializeComponent();
-            GetProcess(listView2);
-            timer = new System.Windows.Forms.Timer();
-            timer.Interval = 5000;
-            timer.Tick += new EventHandler(Timer_Tick);
-            timer.Start();
+            //searchPC();
+            //timer = new System.Windows.Forms.Timer();
+            //timer.Interval = 5000;
+            //timer.Tick += new EventHandler(Timer_Tick);
+            //timer.Start();
         }
-
-        private void Timer_Tick(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            
+            //tsComboBoxСharacteristic.SelectedIndex = 0;
+            comparer = new ListViewItemComparer();
+            comparer.ColumnIndex = 0;
         }
 
         private void GetHardWareInfo(string key, ListView list)
         {
             list.Items.Clear();
-            ConnectionOptions options = new ConnectionOptions();
-            options.Username = "test";
-            options.Password = "1234";
-            ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2", options);
-            //ManagementScope scope = new ManagementScope("\\\\localhost\\root\\CIMV2");
-            scope.Connect();
             ObjectQuery query = new ObjectQuery("SELECT " + key);
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
             try
@@ -128,46 +124,10 @@ namespace FormsAppHardware
             }
         }
 
-        private void GetProcess(ListView proc_list)
-        {
-            
-            ConnectionOptions options = new ConnectionOptions();
-            options.Username = "test";
-            options.Password = "1234";
-            ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2", options);
-            //ManagementScope scope = new ManagementScope("\\\\localhost\\root\\CIMV2");
-            scope.Connect();
-            ObjectQuery query = new ObjectQuery("SELECT Name,ProcessId FROM Win32_Process");
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
-            proc_list.Items.Clear();
-            try
-            {
-                foreach (ManagementObject obj in searcher.Get())
-                {
-                    ListViewItem item = new ListViewItem(new string[] { obj["Name"].ToString(), Convert.ToInt32(obj["ProcessId"]).ToString() });
-
-                    if (proc_list.Items.Count % 2 != 0)
-                    {
-                        item.BackColor = Color.White;
-                    }
-                    else
-                    {
-                        item.BackColor = Color.WhiteSmoke;
-                    }
-
-                    proc_list.Items.Add(item);
-
-                   
-                    
-                }
-            }
-            catch (Exception) { }
-        }
-
-        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void tsComboBoxСharacteristic_SelectedIndexChanged(object sender, EventArgs e)
         {
             string key = string.Empty;
-            switch (toolStripComboBox1.SelectedItem.ToString())
+            switch (tsComboBoxСharacteristic.SelectedItem.ToString())
             {
                 case "Процессор":
                     key = "* FROM Win32_Processor";
@@ -216,32 +176,73 @@ namespace FormsAppHardware
                     break;
 
             }
-            GetHardWareInfo(key,listView1);
+            GetHardWareInfo(key, listViewСharacteristic);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void GetProcess(ListView proc_list)
         {
-            toolStripComboBox1.SelectedIndex = 0;
-            comparer = new ListViewItemComparer();
-            comparer.ColumnIndex = 0;
+            ObjectQuery query = new ObjectQuery("SELECT Name,ProcessId FROM Win32_Process");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
+            proc_list.Items.Clear();
+            try
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    ListViewItem item = new ListViewItem(new string[] { obj["Name"].ToString(), Convert.ToInt32(obj["ProcessId"]).ToString() });
+
+                    if (proc_list.Items.Count % 2 != 0)
+                    {
+                        item.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        item.BackColor = Color.WhiteSmoke;
+                    }
+
+                    proc_list.Items.Add(item);
+
+                   
+                    
+                }
+            }
+            catch (Exception) { }
         }
-                
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
+
+        private void listViewProcess_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            comparer.ColumnIndex = e.Column;
+
+            comparer.SortDirection = comparer.SortDirection == SortOrder.Ascending ? SortOrder.Descending : SortOrder.Ascending;
+
+            listViewProcess.ListViewItemSorter = comparer;
+
+            listViewProcess.Sort();
+        }
+
+        private void listViewProcess_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (listViewProcess.SelectedItems[0] != null)
+            {
+                toolStripLabel2.Text = listViewProcess.SelectedItems[0].SubItems[0].Text;
+            }
+        }
+
+        private void tsButtonUpdateProcess_Click(object sender, EventArgs e)
+        {
+            GetProcess(listViewProcess);
+            toolStripLabel2.Text = "";
+        }
+
+        private void tsButtonDeleteProcess_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (listView2.SelectedItems[0] != null)
+                if (listViewProcess.SelectedItems[0] != null)
                 {
 
                     try
                     {
-                        ConnectionOptions options = new ConnectionOptions();
-                        options.Username = "test";
-                        options.Password = "1234";
-                        ManagementScope scope = new ManagementScope("\\\\IDEAPAD330S\\root\\CIMV2", options);
-                        //ManagementScope scope = new ManagementScope("\\\\localhost\\root\\CIMV2");
-                        scope.Connect();
-                        ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Process WHERE Name='" + listView2.SelectedItems[0].SubItems[0].Text + "'");
+                        ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_Process WHERE Name='" + listViewProcess.SelectedItems[0].SubItems[0].Text + "'");
                         ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query);
                         foreach (ManagementObject obj in searcher.Get())
                         {
@@ -255,32 +256,7 @@ namespace FormsAppHardware
                 }
             }
             catch (Exception) { }
-            GetProcess(listView2);
-        }
-
-        private void listView2_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (listView2.SelectedItems[0] != null)
-            {
-                toolStripLabel2.Text = listView2.SelectedItems[0].SubItems[0].Text;
-            }
-        }
-
-        private void listView2_ColumnClick(object sender, ColumnClickEventArgs e)
-        {
-            comparer.ColumnIndex = e.Column;
-
-            comparer.SortDirection = comparer.SortDirection == SortOrder.Ascending ? SortOrder.Descending : SortOrder.Ascending;
-
-            listView2.ListViewItemSorter = comparer;
-
-            listView2.Sort();
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            GetProcess(listView2);
-            toolStripLabel2.Text = "";
+            GetProcess(listViewProcess);
         }
 
         void searchPC()
@@ -296,12 +272,23 @@ namespace FormsAppHardware
                         this.IP = ip.ToString();
                     }
                 }
-                Invoke((MethodInvoker)delegate
+                
+                /*Invoke((MethodInvoker)delegate
                 {
                     label1.Text = "This Computer: " + this.IP;
                 });
+                */
+
+                Invoke((MethodInvoker)delegate
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.Text = "Этот компьютер";
+                    item.SubItems.Add(this.IP);
+                    listViewConnect.Items.Add(item);
+                });
+                
                 string[] ipRange = IP.Split('.');
-                for (int i = 0; i < 255; i++)
+                for (int i = 2; i < 255; i++)
                 {
                     Ping ping = new Ping();
                     string testIP = ipRange[0] + '.' + ipRange[1] + '.' + ipRange[2] + '.' + i.ToString();
@@ -318,9 +305,9 @@ namespace FormsAppHardware
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void buttonUpdateConnect_Click(object sender, EventArgs e)
         {
-            listView3.Items.Clear();
+            listViewConnect.Items.Clear();
             try
             {
                 findPC = new Thread(new ThreadStart(searchPC));
@@ -333,7 +320,6 @@ namespace FormsAppHardware
             }
         }
 
-        //for searching online computers
         void pingCompletedEvent(object sender, PingCompletedEventArgs e)
         {
             string ip = (string)e.UserState;
@@ -354,9 +340,71 @@ namespace FormsAppHardware
                     ListViewItem item = new ListViewItem();
                     item.Text = name;
                     item.SubItems.Add(ip);
-                    listView3.Items.Add(item);
+                    listViewConnect.Items.Add(item);
                 });
             }
         }
+
+        private void listViewConnect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxLogin.Clear();
+            textBoxPas.Clear();
+        }
+
+        private void textBoxPC_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxPC.Text == "Этот компьютер")
+            {
+                buttonConnect.Enabled = true;
+                textBoxLogin.Enabled = false;
+                textBoxPas.Enabled = false;
+            }
+            else
+            {
+                textBoxLogin.Enabled = true;
+                textBoxPas.Enabled = true;
+                buttonConnect.Enabled = false;
+            }
+        }
+
+        private void listViewConnect_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxPC.Text = listViewConnect.SelectedItems[0].SubItems[0].Text;
+        }
+
+        private void textBoxLoginPas_TextChanged(object sender, EventArgs e)
+        {
+            buttonConnect.Enabled = textBoxLogin.Text.Length > 0 && textBoxPas.Text.Length > 0;
+        }
+
+        private void buttonConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ConnectionOptions options = new ConnectionOptions();
+                if (textBoxPC.Text == "Этот компьютер")
+                {
+                    scope = new ManagementScope("\\\\localhost\\root\\CIMV2");
+                    scope.Connect();
+                }
+                else
+                {
+                    options.Username = textBoxLogin.Text;
+                    options.Password = textBoxPas.Text;
+                    scope = new ManagementScope($"\\\\{textBoxPC.Text}\\root\\CIMV2", options);
+                    scope.Connect();
+                }
+                labelStatusConnect.ForeColor = Color.Green;
+                labelStatusConnect.Text = "Подключение установлено";
+                GetProcess(listViewProcess);
+            }
+            catch (Exception)
+            {
+                labelStatusConnect.ForeColor = Color.Red;
+                labelStatusConnect.Text = "Не удалось подключиться";
+            }
+        }
+
+        
     }
 }
