@@ -1,0 +1,9 @@
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\obj\Debug\HTTPServer.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\obj\Debug\HTTPServer.Properties.Resources.resources
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\obj\Debug\HTTPServer.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\obj\Debug\HTTPServer.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\bin\Debug\HTTPServer.exe.config
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\bin\Debug\HTTPServer.exe
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\bin\Debug\HTTPServer.pdb
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\obj\Debug\HTTPServer.exe
+D:\Program\DIPLOM\test\KeyLogger\HTTPServer\obj\Debug\HTTPServer.pdb

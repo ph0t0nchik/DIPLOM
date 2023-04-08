@@ -95,7 +95,7 @@ namespace FormsAppHardware
             this.tsComboBoxСharacteristic});
             this.toolStrip1.Location = new System.Drawing.Point(3, 3);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(804, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(804, 31);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -118,7 +118,8 @@ namespace FormsAppHardware
             "Процессы",
             "Локальная сеть"});
             this.tsComboBoxСharacteristic.Name = "tsComboBoxСharacteristic";
-            this.tsComboBoxСharacteristic.Size = new System.Drawing.Size(121, 28);
+            this.tsComboBoxСharacteristic.Size = new System.Drawing.Size(121, 31);
+            this.tsComboBoxСharacteristic.Text = "Коллекция";
             this.tsComboBoxСharacteristic.SelectedIndexChanged += new System.EventHandler(this.tsComboBoxСharacteristic_SelectedIndexChanged);
             // 
             // listViewСharacteristic

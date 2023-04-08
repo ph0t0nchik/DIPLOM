@@ -28,7 +28,6 @@ namespace FormsAppHardware
         public Form1()
         {
             InitializeComponent();
-            //searchPC();
             //timer = new System.Windows.Forms.Timer();
             //timer.Interval = 5000;
             //timer.Tick += new EventHandler(Timer_Tick);
@@ -273,12 +272,6 @@ namespace FormsAppHardware
                     }
                 }
                 
-                /*Invoke((MethodInvoker)delegate
-                {
-                    label1.Text = "This Computer: " + this.IP;
-                });
-                */
-
                 Invoke((MethodInvoker)delegate
                 {
                     ListViewItem item = new ListViewItem();
@@ -394,8 +387,10 @@ namespace FormsAppHardware
                     scope = new ManagementScope($"\\\\{textBoxPC.Text}\\root\\CIMV2", options);
                     scope.Connect();
                 }
+                
                 labelStatusConnect.ForeColor = Color.Green;
                 labelStatusConnect.Text = "Подключение установлено";
+                listViewСharacteristic.Items.Clear();
                 GetProcess(listViewProcess);
             }
             catch (Exception)
