@@ -29,6 +29,7 @@ namespace FormsAppHardware
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +51,8 @@ namespace FormsAppHardware
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.listViewConnect = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,12 +66,14 @@ namespace FormsAppHardware
             this.textBoxPC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.labelStatusConnect = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -78,14 +83,14 @@ namespace FormsAppHardware
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1099, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1099, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // toolStrip1
@@ -95,7 +100,7 @@ namespace FormsAppHardware
             this.tsComboBoxСharacteristic});
             this.toolStrip1.Location = new System.Drawing.Point(3, 3);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(804, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(804, 28);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -118,7 +123,7 @@ namespace FormsAppHardware
             "Процессы",
             "Локальная сеть"});
             this.tsComboBoxСharacteristic.Name = "tsComboBoxСharacteristic";
-            this.tsComboBoxСharacteristic.Size = new System.Drawing.Size(121, 31);
+            this.tsComboBoxСharacteristic.Size = new System.Drawing.Size(121, 28);
             this.tsComboBoxСharacteristic.Text = "Коллекция";
             this.tsComboBoxСharacteristic.SelectedIndexChanged += new System.EventHandler(this.tsComboBoxСharacteristic_SelectedIndexChanged);
             // 
@@ -131,7 +136,7 @@ namespace FormsAppHardware
             this.listViewСharacteristic.FullRowSelect = true;
             this.listViewСharacteristic.GridLines = true;
             this.listViewСharacteristic.HideSelection = false;
-            this.listViewСharacteristic.Location = new System.Drawing.Point(3, 21);
+            this.listViewСharacteristic.Location = new System.Drawing.Point(3, 23);
             this.listViewСharacteristic.Name = "listViewСharacteristic";
             this.listViewСharacteristic.Size = new System.Drawing.Size(804, 566);
             this.listViewСharacteristic.TabIndex = 2;
@@ -152,11 +157,12 @@ namespace FormsAppHardware
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tabControl1.Location = new System.Drawing.Point(281, 30);
+            this.tabControl1.Location = new System.Drawing.Point(281, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(818, 623);
+            this.tabControl1.Size = new System.Drawing.Size(818, 625);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -166,7 +172,7 @@ namespace FormsAppHardware
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(810, 590);
+            this.tabPage1.Size = new System.Drawing.Size(810, 592);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Характеристики";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -269,6 +275,29 @@ namespace FormsAppHardware
             // 
             this.columnHeader5.Text = "Описание";
             this.columnHeader5.Width = 300;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(810, 592);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Ввод";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(810, 592);
+            this.textBox1.TabIndex = 0;
             // 
             // listViewConnect
             // 
@@ -392,6 +421,11 @@ namespace FormsAppHardware
             this.labelStatusConnect.Size = new System.Drawing.Size(0, 20);
             this.labelStatusConnect.TabIndex = 14;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 2000;
+            this.timer1.Tick += new System.EventHandler(this.updateKeysInfo);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -428,6 +462,8 @@ namespace FormsAppHardware
             this.tabPage2.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,6 +504,9 @@ namespace FormsAppHardware
         private System.Windows.Forms.TextBox textBoxPC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelStatusConnect;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -1,0 +1,100 @@
+
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : KeyLogger+ (выполняется) - Microsoft Visual Studio (Администратор)
+Time    : 2023-04-16 12:56:57 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+wwwwwwaadasdad
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : Редактор коллекции TabPage
+Time    : 2023-04-16 01:01:32 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+<Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Alt>Ddjl<Enter>Ddjl<Backspace><Backspace><Backspace><Backspace><Backspace><Alt>tabp<Backspace>Page3<Enter>
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : FormsAppHardware - Microsoft Visual Studio
+Time    : 2023-04-16 01:02:43 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+tex<Backspace><Backspace><Backspace>mul<Backspace><Backspace><Backspace>tex
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : Шрифт
+Time    : 2023-04-16 01:03:54 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+o<Backspace><Backspace>co
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : FormsAppHardware - Microsoft Visual Studio
+Time    : 2023-04-16 01:05:20 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+<Ctrl>s
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : Входящие — облегченный Outlook Web Access, группа Домашняя группа — Яндекс Браузер
+Time    : 2023-04-16 01:06:02 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+windows  forms timer<Enter>
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : FormsAppHardware - Microsoft Visual Studio
+Time    : 2023-04-16 01:07:06 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+<Enter><Enter>pr<Enter> voi<Enter><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace>ti<Backspace><Backspace><Backspace><Backspace>500pda<Backspace><Backspace><Backspace>updateKeysInfo<Enter>Dis<Backspace><Backspace><Backspace><Alt><Tab><Ctrl>s<Ctrl>c<Ctrl>v<Ctrl>c<Backspace><Ctrl>v<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Right>var<Backspace><Backspace><Backspace>string compputerName = <Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right>;<Enter><Enter><Backspace><Down>Fu<Backspace>ile.<Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace>Syh<Backspace>s<Enter>.IO.S<Backspace>Fi<Enter>.<Enter>(if ()<Enter><Left>../../<Down><Left>$s<Backspace>computer<Enter><Right><Ctrl>s/log.txttext<Backspace><Backspace><Backspace><Backspace>using<Backspace><Backspace><Backspace><Backspace><Backspace>using<Backspace><Backspace><Backspace><Backspace><Backspace>(<Backspace>using StreamReader<Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace>Y<Backspace>ystem.I<Enter>.St<Down><Down><Enter>(<Backspace> sw = Sn<Backspace><Backspace>new <Enter>.<Backspace>(<Ctrl>c<Ctrl>v)<Right><Backspace>)(<Enter>for (string line = sw.Re<Backspace>Reead<Backspace><Backspace><Backspace>ader<Backspace>r<Ctrl>c<Ctrl>v<Left>eadLine()<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Backspace>r<Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right>; str<Backspace><Backspace><Backspace>line != null; line = s.<Backspace><Backspace><Backspace><Backspace><Backspace><Backspace>r.<Enter>()<Right><Enter><Ctrl>S<Backspace>tes<Backspace><Backspace><Backspace>xt<Backspace><Backspace><Backspace>xtBox1.<Enter> = F<Backspace>SY<Enter><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace>STR<Backspace><Backspace><Backspace>stem.IO.R<Backspace>F<Enter>.<Enter>(<Ctrl>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz<Enter><Right><Enter><Ctrl>s<Enter><Enter>Dic<Enter><string, List<strign<Backspace><Backspace>ng<Right><Right> enteredKeys = new(<Right>;<Ctrl>c<Ctrl>v <Ctrl>s<Enter>ente<Enter> = c<Backspace><Backspace><Backspace><Backspace>.cle<Enter>(<Right>;
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : Server (выполняется) - Microsoft Visual Studio
+Time    : 2023-04-16 01:21:24 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+<Left><Left><Right><Backspace><Right><Right><Right><Right><Right><Right><Right><Right><Right><Backspace><Right><Right><Backspace><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Backspace><Ctrl>s
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : FormsAppHardware - Microsoft Visual Studio
+Time    : 2023-04-16 01:21:43 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.16.04.2023_0.56.log
+----------------------------------------------
+Log data: 
+
+
+l

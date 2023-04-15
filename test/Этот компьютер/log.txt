@@ -1,0 +1,63 @@
+16.04.2023 1:53:14|Server (выполняется) - Microsoft Visual Studio|d
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|d
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|a
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|w
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|0
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|y
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|0
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|y
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|8
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|y
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|8
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
+16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|y
+16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
+16.04.2023 1:53:22|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|d
+16.04.2023 1:53:22|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|s
+16.04.2023 1:53:22|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|d
+16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|s
+16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|d
+16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|a
+16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|w
+16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|3
+16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|5
+16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|2
+16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|<Tab>
+16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|4
+16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|4
+16.04.2023 1:53:28|Этот компьютер|s
+16.04.2023 1:53:28|Этот компьютер|s
+16.04.2023 1:53:28|Этот компьютер|d
+16.04.2023 1:53:28|Этот компьютер|s
+16.04.2023 1:53:28|Этот компьютер|d
+16.04.2023 1:53:28|Этот компьютер|a
+16.04.2023 1:53:29|Этот компьютер|s
+16.04.2023 1:53:29|Этот компьютер|d
+16.04.2023 1:53:29|Этот компьютер|a
+16.04.2023 1:53:29|Этот компьютер|s
+16.04.2023 1:54:05|this|<Ctrl>
+16.04.2023 1:54:06|this|c
+16.04.2023 1:54:07|this|<Ctrl>
+16.04.2023 1:54:07|this|c
+16.04.2023 1:54:10|Этот компьютер|<Ctrl>
+16.04.2023 1:54:10|Этот компьютер|v

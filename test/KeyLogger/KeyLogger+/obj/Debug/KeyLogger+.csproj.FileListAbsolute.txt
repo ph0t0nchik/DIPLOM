@@ -7,3 +7,6 @@ D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\KeyLogger+.exe
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\KeyLogger+.pdb
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.exe
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.pdb
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\Newtonsoft.Json.dll
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\Newtonsoft.Json.xml
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.csproj.CopyComplete

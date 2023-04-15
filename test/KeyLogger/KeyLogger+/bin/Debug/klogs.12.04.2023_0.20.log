@@ -1,0 +1,34 @@
+
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : C# HTTP Server Implementation, группа Домашняя группа — Яндекс Браузер
+Time    : 2023-04-12 12:20:26 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.12.04.2023_0.20.log
+----------------------------------------------
+Log data: 
+
+
+qwqeqwe<Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace>123<Backspace><Backspace><Backspace><Backspace>lo<Enter>
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : ERROR: The requested URL could not be retrieved, группа Домашняя группа — Яндекс Браузер
+Time    : 2023-04-12 12:20:54 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.12.04.2023_0.20.log
+----------------------------------------------
+Log data: 
+
+
+<Ctrl>c
+
+====================================LOG RECORD START====================================
+User    : DESKTOP-TTCB835\user
+Window  : C# HTTP Server Implementation, группа Домашняя группа — Яндекс Браузер
+Time    : 2023-04-12 12:20:59 
+LogFile : D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\klogs.12.04.2023_0.20.log
+----------------------------------------------
+Log data: 
+
+
+<Ctrl>v<Enter>

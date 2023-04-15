@@ -1,0 +1,9 @@
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Release\KeyLogger+.exe.config
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Release\KeyLogger+.exe
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Release\KeyLogger+.pdb
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger_.Properties.Resources.resources
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.exe
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.pdb
