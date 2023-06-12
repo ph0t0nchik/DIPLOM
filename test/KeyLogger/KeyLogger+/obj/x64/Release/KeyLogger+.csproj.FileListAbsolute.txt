@@ -1,0 +1,12 @@
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\x64\Release\KeyLogger+.exe.config
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\x64\Release\KeyLogger+.exe
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\x64\Release\KeyLogger+.pdb
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\x64\Release\Newtonsoft.Json.dll
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\x64\Release\Newtonsoft.Json.xml
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\x64\Release\KeyLogger+.csproj.AssemblyReference.cache
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\x64\Release\KeyLogger_.Properties.Resources.resources
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\x64\Release\KeyLogger+.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\x64\Release\KeyLogger+.csproj.CoreCompileInputs.cache
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\x64\Release\KeyLogger+.csproj.CopyComplete
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\x64\Release\KeyLogger+.exe
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\x64\Release\KeyLogger+.pdb

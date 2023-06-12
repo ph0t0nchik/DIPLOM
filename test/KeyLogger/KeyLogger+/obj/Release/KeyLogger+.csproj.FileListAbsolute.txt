@@ -7,3 +7,6 @@ D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.csproj.Genera
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.csproj.CoreCompileInputs.cache
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.exe
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.pdb
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Release\Newtonsoft.Json.dll
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Release\Newtonsoft.Json.xml
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Release\KeyLogger+.csproj.CopyComplete

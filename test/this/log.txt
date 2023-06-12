@@ -1,122 +1,54 @@
-16.04.2023 1:50:03:Server (выполняется) - Microsoft Visual Studio:s
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:s
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:d
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:f
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:d
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:f
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:f
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:e
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:a
-16.04.2023 1:50:05:Server (выполняется) - Microsoft Visual Studio:w
-16.04.2023 1:50:06:Server (выполняется) - Microsoft Visual Studio:f
-16.04.2023 1:50:37:this:a
-16.04.2023 1:50:37:this:s
-16.04.2023 1:50:37:this:d
-16.04.2023 1:50:37:this:a
-16.04.2023 1:50:37:this:s
-16.04.2023 1:50:37:this:d
-16.04.2023 1:50:37:this:a
-16.04.2023 1:50:37:this:s
-16.04.2023 1:50:38:this:d
-16.04.2023 1:50:38:this:a
-16.04.2023 1:50:38:this:s
-16.04.2023 1:50:38:this:d
-16.04.2023 1:50:43:HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер:a
-16.04.2023 1:53:14|Server (выполняется) - Microsoft Visual Studio|d
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|d
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|a
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|w
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|0
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|y
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|0
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|y
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|8
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|y
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|8
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|7
-16.04.2023 1:53:16|Server (выполняется) - Microsoft Visual Studio|y
-16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:18|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:19|Server (выполняется) - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:53:22|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|d
-16.04.2023 1:53:22|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|s
-16.04.2023 1:53:22|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|d
-16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|s
-16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|d
-16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|a
-16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|w
-16.04.2023 1:53:23|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|3
-16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|5
-16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|2
-16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|<Tab>
-16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|4
-16.04.2023 1:53:24|HashCode.Combine Метод (System) | Microsoft Learn, группа группа 1 — Яндекс Браузер|4
-16.04.2023 1:53:28|Этот компьютер|s
-16.04.2023 1:53:28|Этот компьютер|s
-16.04.2023 1:53:28|Этот компьютер|d
-16.04.2023 1:53:28|Этот компьютер|s
-16.04.2023 1:53:28|Этот компьютер|d
-16.04.2023 1:53:28|Этот компьютер|a
-16.04.2023 1:53:29|Этот компьютер|s
-16.04.2023 1:53:29|Этот компьютер|d
-16.04.2023 1:53:29|Этот компьютер|a
-16.04.2023 1:53:29|Этот компьютер|s
-16.04.2023 1:54:05|this|<Ctrl>
-16.04.2023 1:54:06|this|c
-16.04.2023 1:54:07|this|<Ctrl>
-16.04.2023 1:54:07|this|c
-16.04.2023 1:54:10|Этот компьютер|<Ctrl>
-16.04.2023 1:54:10|Этот компьютер|v
-16.04.2023 1:54:56|log.txt – Блокнот|<Backspace>
-16.04.2023 1:54:56|log.txt – Блокнот|<Backspace>
-16.04.2023 1:54:57|*log.txt – Блокнот|<Delete>
-16.04.2023 1:54:59|*log.txt – Блокнот|<Ctrl>
-16.04.2023 1:54:59|*log.txt – Блокнот|s
-16.04.2023 1:55:22|FormsAppHardware - Microsoft Visual Studio|!
-16.04.2023 1:55:23|FormsAppHardware - Microsoft Visual Studio|<Ctrl>
-16.04.2023 1:55:23|FormsAppHardware - Microsoft Visual Studio|s
-16.04.2023 1:55:40|FormsAppHardware - Microsoft Visual Studio|<Ctrl>
-16.04.2023 1:55:40|FormsAppHardware - Microsoft Visual Studio|z
-16.04.2023 1:55:46|FormsAppHardware - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:55:46|FormsAppHardware - Microsoft Visual Studio|1
-16.04.2023 1:55:47|FormsAppHardware - Microsoft Visual Studio|<Ctrl>
-16.04.2023 1:55:47|FormsAppHardware - Microsoft Visual Studio|s
-16.04.2023 1:57:03|FormsAppHardware - Microsoft Visual Studio|<Left>
-16.04.2023 1:57:04|FormsAppHardware - Microsoft Visual Studio|n
-16.04.2023 1:57:04|FormsAppHardware - Microsoft Visual Studio|n
-16.04.2023 1:57:06|FormsAppHardware - Microsoft Visual Studio|<Ctrl>
-16.04.2023 1:57:06|FormsAppHardware - Microsoft Visual Studio|s
-16.04.2023 1:57:19|FormsAppHardware - Microsoft Visual Studio|<Ctrl>
-16.04.2023 1:57:19|FormsAppHardware - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:57:19|FormsAppHardware - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:57:19|FormsAppHardware - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:57:20|FormsAppHardware - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:57:20|FormsAppHardware - Microsoft Visual Studio|<Backspace>
-16.04.2023 1:57:20|FormsAppHardware - Microsoft Visual Studio|>
-16.04.2023 1:57:21|FormsAppHardware - Microsoft Visual Studio|>
-16.04.2023 1:57:21|FormsAppHardware - Microsoft Visual Studio|>
-16.04.2023 1:57:21|FormsAppHardware - Microsoft Visual Studio|>
-16.04.2023 1:57:21|FormsAppHardware - Microsoft Visual Studio|>
-16.04.2023 1:57:21|FormsAppHardware - Microsoft Visual Studio|<Ctrl>
-16.04.2023 1:57:21|FormsAppHardware - Microsoft Visual Studio|s
-16.04.2023 1:57:23|FormsAppHardware - Microsoft Visual Studio|<Ctrl>
-16.04.2023 1:57:24|FormsAppHardware - Microsoft Visual Studio|s
-16.04.2023 1:57:24|FormsAppHardware - Microsoft Visual Studio|<Ctrl>
+27.04.2023 11:08:16|*новый 2 - Notepad  |q
+27.04.2023 11:08:16|*новый 2 - Notepad  |w
+27.04.2023 11:08:16|*новый 2 - Notepad  |e
+27.04.2023 11:08:17|*новый 2 - Notepad  |r
+27.04.2023 11:08:17|*новый 2 - Notepad  |t
+27.04.2023 11:08:17|*новый 2 - Notepad  |y
+27.04.2023 11:08:18|*новый 2 - Notepad  |u
+27.04.2023 11:08:19|*новый 2 - Notepad  |s
+27.04.2023 11:08:19|*новый 2 - Notepad  |d
+27.04.2023 11:08:19|*новый 2 - Notepad  |f
+27.04.2023 11:08:19|*новый 2 - Notepad  |g
+27.04.2023 11:08:19|*новый 2 - Notepad  |h
+27.04.2023 11:08:19|*новый 2 - Notepad  |j
+27.04.2023 11:08:20|*новый 2 - Notepad  |k
+27.04.2023 11:08:20|*новый 2 - Notepad  |1
+27.04.2023 11:08:20|*новый 2 - Notepad  |2
+27.04.2023 11:08:20|*новый 2 - Notepad  |3
+27.04.2023 11:08:21|*новый 2 - Notepad  |4
+27.04.2023 11:08:21|*новый 2 - Notepad  |5
+27.04.2023 11:08:21|*новый 2 - Notepad  |6
+29.04.2023 11:17:29|Этот компьютер|<Delete>
+29.04.2023 11:17:47|test|a
+29.04.2023 11:17:47|test|s
+29.04.2023 11:17:47|test|d
+29.04.2023 11:17:48|test|a
+29.04.2023 11:17:48|test|s
+29.04.2023 11:17:48|test|d
+29.04.2023 11:17:48|test|a
+29.04.2023 11:17:48|test|s
+29.04.2023 11:17:48|test|d
+29.04.2023 11:18:29|*новый 2 - Notepad  |<Enter>
+29.04.2023 11:18:29|*новый 2 - Notepad  |a
+29.04.2023 11:18:29|*новый 2 - Notepad  |s
+29.04.2023 11:18:29|*новый 2 - Notepad  |d
+29.04.2023 11:18:29|*новый 2 - Notepad  |a
+29.04.2023 11:18:29|*новый 2 - Notepad  |s
+29.04.2023 11:18:29|*новый 2 - Notepad  |d
+29.04.2023 11:18:30|*новый 2 - Notepad  |a
+29.04.2023 11:18:30|*новый 2 - Notepad  |q
+29.04.2023 11:18:30|*новый 2 - Notepad  |w
+29.04.2023 11:18:30|*новый 2 - Notepad  |e
+29.04.2023 11:18:30|*новый 2 - Notepad  |q
+29.04.2023 11:18:31|*новый 2 - Notepad  |e
+29.04.2023 11:18:31|*новый 2 - Notepad  |q
+29.04.2023 11:18:31|*новый 2 - Notepad  |q
+29.04.2023 11:18:31|*новый 2 - Notepad  |w
+29.04.2023 11:18:41|Этот компьютер|<Ctrl>
+29.04.2023 11:18:42|Этот компьютер|z
+29.04.2023 11:19:03|*новый 2 - Notepad  |<Enter>
+29.04.2023 11:19:05|*новый 2 - Notepad  |H
+29.04.2023 11:19:05|*новый 2 - Notepad  |e
+29.04.2023 11:19:06|*новый 2 - Notepad  |l
+29.04.2023 11:19:06|*новый 2 - Notepad  |l
+29.04.2023 11:19:06|*новый 2 - Notepad  |o

